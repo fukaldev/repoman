@@ -1,6 +1,5 @@
 /*
 Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
@@ -13,13 +12,17 @@ import (
 // debCmd represents the deb command
 var debCmd = &cobra.Command{
 	Use:   "deb",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "Subset of commands for Debian repositories",
+	Long: `Subset of commands for Debian repositories. This will allow you to create, delete, and
+	list Debian repositories.
+	
+	Example:
+	$ repoman deb create
+	$ Repo Name: my-debian-repo
+	$ Debian repo created at s3://my-debian-repo
+	$ repoman deb delete
+	$ Repo Name: my-debian-repo
+	$ Debian repo deleted at s3://my-debian-repo`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("deb called")
 	},

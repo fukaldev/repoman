@@ -1,6 +1,5 @@
 /*
 Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
@@ -13,13 +12,17 @@ import (
 // pyCmd represents the py command
 var pyCmd = &cobra.Command{
 	Use:   "py",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "Subset of commands for Python repositories",
+	Long: `Subset of commands for Python repositories. This will allow you to create, delete, and
+	list Python repositories.
+	
+	Example:
+	$ repoman py create
+	$ Repo Name: my-python-repo
+	$ Python repo created at s3://my-python-repo
+	$ repoman py delete
+	$ Repo Name: my-python-repo
+	$ Python repo deleted at s3://my-python-repo`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("py called")
 	},
